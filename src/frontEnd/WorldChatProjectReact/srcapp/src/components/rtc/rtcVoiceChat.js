@@ -118,7 +118,6 @@ const RtcVoiceChat = ({showRtcVoiceChat, sendUser, receiverUser, setShowRtcVoice
 
     const {userList, setUserList} = useContext(UserListContext);
     // let localUserName = "";
-    console.log(userList+"TLQKF");
     const sendUserProfile = userList.find(u => u.userName === sendUser)?.userProfileName;
     const receiverUserProfile = userList.find(u => u.userName === receiverUser)?.userProfileName;
 
@@ -571,8 +570,6 @@ const RtcVoiceChat = ({showRtcVoiceChat, sendUser, receiverUser, setShowRtcVoice
         setType2('');
         console.log("보이스스탑메소드" + type2);
 
-        alert("상대방과의 연결이 끊어졌습니다.");
-
         if (localStreamRef.current) {
             localStreamRef.current.getTracks().forEach(track => track.stop());
         }
@@ -598,6 +595,8 @@ const RtcVoiceChat = ({showRtcVoiceChat, sendUser, receiverUser, setShowRtcVoice
 
         setShowRtcVoiceChat(false);
         isMinimize2(false);
+        setReceiverIsTalking(false);
+        setSenderIsTalking(false);
 
         remoteAudio.current = null;
         localAudio.current = null;

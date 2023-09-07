@@ -9,7 +9,9 @@ import FriendsReceivedListItem from "./FriendsReceivedListItem";
 import FriendsRequestedListItem from "./FriendsRequestedListItem";
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import PasswordChange from "./PasswordChange";
+import UserDelete from "./userDelete";
 import styled, {keyframes} from "styled-components";
+import ClearIcon from "@mui/icons-material/Clear";
 
 const slideDown = keyframes`
   0% {
@@ -51,6 +53,10 @@ const MyPage = React.memo(({
         //패스워드 수정 버튼 클릭 상태
         const [isPasswordChangeDiv, setIsPasswordChangeDiv] = useState(false);
         const [isPasswordChangeDiv2, setIsPasswordChangeDiv2] = useState(false);
+
+        const [isUserDelDiv, setIsUserDelDiv] = useState(false);
+        const [isUserDelDiv2, setIsUserDelDiv2] = useState(false);
+        const userdelDivRef = useRef(null);
         //패스워드 수정 창 외의 화면 클릭 시 상태
         const passwordChangeDivRef = useRef(null);
         //패스워드 수정 창 띄우고 창 밖 클릭 시 창 닫힘
@@ -66,14 +72,35 @@ const MyPage = React.memo(({
                 };
             }
         }, [isPasswordChangeDiv]);
+        useEffect(() => {
+            if (isUserDelDiv) {
+                const onClick = (event) => {
+                    handleOutsideClick2(event);
+                }
+                setTimeout(() => document.addEventListener("click", onClick), 0);
+
+                return () => {
+                    document.removeEventListener("click", onClick);
+                };
+            }
+        }, [isUserDelDiv]);
         const handleOutsideClick = (event) => {
             if (passwordChangeDivRef.current && !passwordChangeDivRef.current.contains(event.target)) {
                 setIsPasswordChangeDiv(false);
+            }
+        }
+        const handleOutsideClick2 = (event) => {
+            if (userdelDivRef.current && !userdelDivRef.current.contains(event.target)) {
+                setIsUserDelDiv(false);
             }
         };
         const isPasswordChangeDivClose = (newValue) => {
             setIsPasswordChangeDiv(newValue);
             setIsPasswordChangeDiv2(true);
+        };
+        const isUserDelClose = (newValue) => {
+            setIsUserDelDiv(newValue);
+            setIsUserDelDiv2(true);
         };
         //마이페이지
         const [MypageuserName, setMypageuserName] = useState('');
@@ -96,7 +123,6 @@ const MyPage = React.memo(({
 
         useEffect(() => {
             if (MyPageG) {
-                console.log("마이")
                 setMypageOnClick(true);
                 setFriendsReceivedOnClick(false);
                 setFriendsRequesteddOnClick(false);
@@ -104,7 +130,6 @@ const MyPage = React.memo(({
         }, [MyPageG]);
         useEffect(() => {
             if (FriendsReceived) {
-                console.log("리시브")
                 setMypageOnClick(false);
                 setFriendsReceivedOnClick(true);
                 setFriendsRequesteddOnClick(false);
@@ -112,7 +137,6 @@ const MyPage = React.memo(({
         }, [FriendsReceived]);
         useEffect(() => {
             if (FriendsReqested) {
-                console.log("리퀘")
                 setMypageOnClick(false);
                 setFriendsReceivedOnClick(false);
                 setFriendsRequesteddOnClick(true);
@@ -143,13 +167,10 @@ const MyPage = React.memo(({
                                 Authorization: `${localStorage.getItem('Authorization')}`
                             }
                         });
-                        console.log(response);
-                        console.log(response.data.items);
                         if (response.data && response.data.items) {
                             setReceivedList(() => response.data.items);
                         }
                     } catch (e) {
-                        console.log(e);
                     }
                 }
                 getReceivedListAxios();
@@ -165,12 +186,10 @@ const MyPage = React.memo(({
                                 Authorization: `${localStorage.getItem('Authorization')}`
                             }
                         });
-                        console.log(response);
                         if (response.data && response.data.items) {
                             setRequestedList(() => response.data.items);
                         }
                     } catch (e) {
-                        console.log(e);
                     }
                 }
                 getRequestedListAxios();
@@ -235,7 +254,10 @@ const MyPage = React.memo(({
             setIsPasswordChangeDiv(true);
             setIsPasswordChangeDiv2(true);
         }
-
+        const userDelDiv = () => {
+            setIsUserDelDiv(true);
+            setIsUserDelDiv2(true);
+        }
 //textarea 100자 이내 입력
 
         const handleTextAreaChange = (e) => {
@@ -289,6 +311,10 @@ const MyPage = React.memo(({
         // 이미지 미리보기 처리 함수
         const handleClickImage = () => {
             document.getElementById("imageInput").click();
+        };
+
+        const home = (data) => {
+            logoutApi(data);
         };
 
         const uploadImage = async (retry = true) => {
@@ -394,8 +420,18 @@ const MyPage = React.memo(({
                     <PasswordChange
                         isPasswordChangeDiv={isPasswordChangeDiv}
                         isPasswordChangeDivClose={isPasswordChangeDivClose}
+                        logoutApi2={home}
                     >
                     </PasswordChange>
+                </DivStyled>
+                <DivStyled visible={isUserDelDiv ? "visible" : isUserDelDiv2 ? "" : "hidden"}
+                           ref={userdelDivRef}>
+                    <UserDelete
+                        isUserDelDiv={isUserDelDiv}
+                        isUserDelClose={isUserDelClose}
+                        logoutApi2={home}
+                    >
+                    </UserDelete>
                 </DivStyled>
                 {mypageOnClick ? (
                         <div className={"myPage_clicked"}>
@@ -418,6 +454,12 @@ const MyPage = React.memo(({
                                     onClick={uploadImage}
                                 >
                                     {profileButtonText}
+                                </Button>
+                                <Button
+                                    className={"user_del_btn"}
+                                    onClick={userDelDiv}
+                                >
+                                    <ClearIcon style={{fontSize:'small'}}/>
                                 </Button>
                             </div>
                             <div className={"myPageDiv3"}>

@@ -130,9 +130,8 @@ const RtcVoiceChat = ({showRtcVoiceChat, sendUser, receiverUser, setShowRtcVoice
             let host = "";
             host = window.location.host;
             console.log(host)
-            host = host.slice(0, -4);
-            console.log("wss://" + host + "9002" + "/voice")
-            const ws = new WebSocket("wss://" + host + "9002" + "/voice");
+            console.log("wss://110.165.16.250:9001/voice")
+            const ws = new WebSocket("wss://110.165.16.250:9001/voice");
             setSocket(ws);
 
             updateUserList();

@@ -53,7 +53,7 @@
 }
 .userList_title_2{
     position: relative;
-    font-family: 'Russo One', sans-serif;
+       font-family: 'Noto Sans KR', sans-serif !important;amily: 'Russo One', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
 }
@@ -95,7 +95,7 @@
     width: 300px;
     height: 310px;
     border-radius: 4px;
-    background-color: rgba(200, 200, 200, 0.9);
+    background-color: rgb(41, 43, 47);
 }
 .creatRoom_Div_2{
     width: 100%;
@@ -162,7 +162,7 @@
     cursor: pointer;
     border: 1px solid rgba(200, 200, 200, 0.2) !important;
     transition: all 0.25s ease-in-out !important;
-    font-family: 'Orbit', sans-serif !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
     padding-left: 15px !important;
     box-sizing: border-box;
     margin-bottom: 10px;
@@ -179,7 +179,7 @@
     cursor: pointer;
     border: 1px solid rgba(200, 200, 200, 0.2) !important;
     transition: all 0.25s ease-in-out !important;
-    font-family: 'Orbit', sans-serif !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
     padding-left: 0px !important;
     box-sizing: border-box;
 }
@@ -194,7 +194,7 @@
     cursor: pointer;
     border: 1px solid rgba(200, 200, 200, 0.2) !important;
     transition: all 0.25s ease-in-out !important;
-    font-family: 'Russo One', sans-serif !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
     box-sizing: border-box;
@@ -1003,7 +1003,7 @@ input[type='number'] {
     color: white !important;
     height: 40px !important;
     font-size: 12px !important;
-    font-family: 'Orbit', sans-serif!important;
+    font-family: 'Noto Sans KR', sans-serif !important;
     border: 0px solid #3b3e3f !important;
     border-top-width: 1px !important;
     box-shadow: 2px 3px 3px 0px black;
@@ -1038,7 +1038,7 @@ input[type='number'] {
     color: white !important;
     height: 40px !important;
     font-size: 12px !important;
-    font-family: 'Orbit', sans-serif!important;
+    font-family: 'Noto Sans KR', sans-serif !important;
     background-color: rgb(67, 76, 98, 0.4) !important;
     border: 0px solid #3b3e3f !important;
     border-top-width: 1px !important;

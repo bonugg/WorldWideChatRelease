@@ -418,7 +418,6 @@ const Drag = React.memo(({show, onClose, logoutApiCate, cateMax, isMinimize}) =>
             }));
             stompClient.disconnect();
         }
-
         setSelectedLanguage(" ");
         setSendMessage('');
         setMessages([]);
@@ -476,6 +475,7 @@ const Drag = React.memo(({show, onClose, logoutApiCate, cateMax, isMinimize}) =>
             setIsClosed(false);
             setIsChatDiv(false);
             setActiveButton(null);
+            setCateLoadingText("Select Category");
         }
     }, [show]);
 

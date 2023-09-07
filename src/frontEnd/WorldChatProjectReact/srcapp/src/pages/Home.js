@@ -478,11 +478,10 @@ const Home = React.memo(() => {
             let host = "";
             host = window.location.host;
             console.log(host)
-            host = host.slice(0, -4);
             if (userName) {
                 //const ws = new WebSocket(`wss://localhost:9002/test`)
-                const ws = new WebSocket(`wss://${host}9002/test?userName=${userName}`);
-                console.log("새로고침 - " + `wss://${host}9002/test?userName=${userName}`);
+                const ws = new WebSocket(`wss://110.165.16.250:9001/test?userName=${userName}`);
+                console.log("새로고침 - " + `wss://${host}/test?userName=${userName}`);
                 setRtcUserName(userName);
                 ws.onopen = (event) => {
                     console.log("요청 전");
@@ -885,7 +884,7 @@ const Home = React.memo(() => {
             params.append('code', code);
             params.append('client_id', '879795063670-a2a8avf7p2vnlqg9mc526r8ge2h5cgvc.apps.googleusercontent.com');
             params.append('client_secret', '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');
-            params.append('redirect_uri', 'https://www.worldwidechat.co.kr:9002');
+            params.append('redirect_uri', 'https://www.worldwidechat.co.kr');
             params.append('grant_type', 'authorization_code');
 
 
@@ -984,7 +983,7 @@ const Home = React.memo(() => {
                 if (username) {
                     //const ws = new WebSocket(`wss://localhost:9002/test`)
                     // response();
-                    const ws = new WebSocket(`wss://${host}9002/test?userName=${userName}`);
+                    const ws = new WebSocket(`wss://110.165.16.250:9001/test?userName=${userName}`);
                     setSocket(ws)
                     // const ws = new WebSocket(`wss://localhost:9002/test?userName=${userName}`);
                     ws.onopen = (event) => {
@@ -1069,7 +1068,7 @@ const Home = React.memo(() => {
 
                 if (username) {
                     //const ws = new WebSocket(`wss://localhost:9002/test`)
-                    const ws = new WebSocket(`wss://${host}9002/test?userName=${userName}`);
+                    const ws = new WebSocket(`wss://110.165.16.250:9001/test?userName=${userName}`);
                     setSocket(ws)
                     // const ws = new WebSocket(`wss://localhost:9002/test?userName=${userName}`);
                     ws.onopen = (event) => {

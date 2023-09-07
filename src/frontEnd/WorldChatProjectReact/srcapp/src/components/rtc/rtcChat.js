@@ -31,9 +31,8 @@ const ChatRoom = ({showRtcChat, sendUser, receiverUser, setShowRtcChat,type2,set
             let host = "";
             host = window.location.host;
             console.log(host)
-            host = host.slice(0, -4);
-            console.log("wss://" + host + "9002" + "/signal");
-            let sockets = new WebSocket("wss://" + host + "9002" + "/signal");
+            console.log("wss://" + host + "/signal");
+            let sockets = new WebSocket("wss://110.165.16.250:9001/signal");
             setSocket(sockets);
         }else {
             if(mypeerconnectionRef.current){

@@ -15,12 +15,13 @@ public class CateUserListService {
     private final CateUserListRepostiory cateUserListRepostiory;
 
     @Transactional
-    public void save(Long cateId, String userName) {
+    public void save(Long cateId, String userName, String userNickName) {
         if (cateUserListRepostiory.findByCateIdAndUserName(cateId, userName) == null) {
             CateUserList entity = CateUserList
                     .builder()
                     .cateId(cateId)
                     .userName(userName)
+                    .userNickName(userNickName)
                     .build();
             cateUserListRepostiory.save(entity);
         }
@@ -42,7 +43,7 @@ public class CateUserListService {
     public List<String> findAllUserNamesByCateId(Long cateId) {
         List<String> userNameList = new ArrayList<>();
         for (CateUserList user : cateUserListRepostiory.findByCateId(cateId)){
-            userNameList.add(String.valueOf(user.getUserName()));
+            userNameList.add(String.valueOf(user.getUserNickName()));
         }
         return userNameList;
     }

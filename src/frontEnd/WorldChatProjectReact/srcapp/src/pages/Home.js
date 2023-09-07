@@ -879,6 +879,7 @@ const Home = React.memo(() => {
             flow: 'auth-code',
         })
         const TokenFromCode = async (code) => {
+            console.log(code);
             setButtonText("Logging in ...");
             const params = new URLSearchParams();
             params.append('code', code);

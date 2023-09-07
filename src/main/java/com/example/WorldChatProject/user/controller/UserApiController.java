@@ -12,14 +12,11 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.coyote.Response;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import java.io.File;
 import java.util.Arrays;
@@ -30,8 +27,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class UserApiController {
-    @Value("${file.path}")
-    String attachPath;
     private final UserService userService;
     private final UserRepository userRepository;
 

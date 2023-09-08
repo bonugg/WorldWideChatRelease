@@ -15,7 +15,6 @@ const NotificationModal = ({ show, onHide, onAccept, onDecline, message,sendUser
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        console.log("모달창 유저프로필 유즈이펙트 이미지" + sendUserProfile);
         setLoading(true);
         
         updateUserList();

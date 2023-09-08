@@ -89,24 +89,22 @@ const FreindsListItem = React.memo(({onRemove, frd, friendsChatDiv, onData, setC
     const deleteCancle = () => {
         setDeleteDiv(false);
     }
-    const deleteFriend = useCallback((e) => {
-        const deleteFriendAxios = async () => {
-            try {
-                const response = await axios.post('/friends/delete-friends', {userId: friends.userId},
-                    {
-                        headers: {
-                            "Authorization": localStorage.getItem("Authorization"),
-                        }
-                    });
-                if (response.data.item.msg == "delete ok") {
-                    setStatements(true);
-                    setTimeout(() => onRemove(id), 1000);  // Add this line
-                }
-            } catch (e) {
+
+    const deleteFriend = async () => {
+        try {
+            const response = await axios.post('/friends/delete-friends', {userId: friends.userId},
+                {
+                    headers: {
+                        "Authorization": localStorage.getItem("Authorization"),
+                    }
+                });
+            if (response.data.item.msg == "delete ok") {
+                setStatements(true);
+                setTimeout(() => onRemove(id), 1000);  // Add this line
             }
+        } catch (e) {
         }
-        deleteFriendAxios();
-    }, [onRemove]);
+    }
 
     return (
         <div className={"friendsList_item_div"}>

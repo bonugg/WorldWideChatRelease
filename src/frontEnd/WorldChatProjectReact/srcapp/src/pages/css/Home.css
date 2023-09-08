@@ -1,13 +1,16 @@
 * {
     list-style-type: none;
 }
+
 *::-webkit-scrollbar {
     width: 8px;
     height: 0px;
 }
+
 *::-webkit-scrollbar-thumb {
     background-color: rgba(50, 50, 50, 0.8);
 }
+
 *::-webkit-scrollbar-thumb:hover {
     cursor: pointer;
     background-color: rgba(50, 50, 50, 0.6);
@@ -16,7 +19,8 @@
 *::-webkit-scrollbar-track {
     background-color: rgba(50, 50, 50, 0.5);
 }
-button{
+
+button {
     font-family: 'Russo One', sans-serif !important;
     transition: all 0.25s ease-in-out !important;
 }
@@ -29,6 +33,7 @@ body {
 .hidden {
     display: none;
 }
+
 .visible {
     display: inline;
 }
@@ -43,6 +48,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .loading_copy {
     overflow: hidden;
     z-index: 10;
@@ -98,10 +104,12 @@ body {
         transform: rotate(360deg);
     }
 }
-.full{
+
+.full {
     overflow: hidden;
     background-color: black;
 }
+
 .fullScreen {
     width: 100vw;
     height: 100vh;
@@ -109,25 +117,30 @@ body {
     overflow: hidden;
     display: flex;
 }
+
 @media (max-width: 1000px) {
-    .fullScreen{
+    .fullScreen {
         width: 1000px;
     }
 }
+
 @media (max-height: 800px) {
     .fullScreen {
         height: 800px;
     }
-    CanvasContainer{
+
+    CanvasContainer {
 
     }
-    .full{
+
+    .full {
         overflow: hidden;
         height: 800px;
 
     }
 }
-.logo_div{
+
+.logo_div {
     margin-top: 1px;
     width: 100%;
     height: 100px;
@@ -145,11 +158,12 @@ body {
 
 .logo_main_text {
     width: 100%;
-    height:100%;
+    height: 100%;
     z-index: 1;
     cursor: pointer;
 }
-.first_div{
+
+.first_div {
     position: fixed;
     top: 0;
     left: 0;
@@ -157,20 +171,22 @@ body {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.65);
     visibility: visible;
-    z-index :20;
+    z-index: 20;
     transition: all 0.25s ease-in-out;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.first_div.none{
+
+.first_div.none {
     opacity: 0;
     visibility: hidden;
-    z-index :-1;
+    z-index: -1;
     transition: all 0.25s ease-in-out;
 }
-.SelectCountry_div{
+
+.SelectCountry_div {
     width: 400px;
     background-color: #0b0b0e;
     border-radius: 4px;
@@ -178,11 +194,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding : 30px;
+    padding: 30px;
     box-sizing: border-box;
     border: 1px solid #3b3e3f;
 }
-.SelectCountry_div_1{
+
+.SelectCountry_div_1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,17 +208,20 @@ body {
     color: white;
     margin-bottom: 40px;
 }
-.SelectCountry_div_2{
+
+.SelectCountry_div_2 {
     width: 100%;
     height: 60px;
 }
-.SelectCountry_div_3{
+
+.SelectCountry_div_3 {
     width: 100%;
     height: 50px;
     display: flex;
     margin-top: 30px;
 }
-.SelectCountry_btn{
+
+.SelectCountry_btn {
     width: 50%;
     height: 100%;
     background-color: #18181f !important;
@@ -213,16 +233,20 @@ body {
     color: white !important;
     margin-right: 40px !important;
 }
-.SelectCountry_btn.no{
+
+.SelectCountry_btn.no {
     background-color: rgba(205, 92, 92, 0.6) !important;
     margin-right: 0px !important;
 }
-.SelectCountry_btn:hover{
+
+.SelectCountry_btn:hover {
     background-color: #272731 !important;
 }
-.SelectCountry_btn.no:hover{
+
+.SelectCountry_btn.no:hover {
     background-color: rgba(205, 92, 92, 0.9) !important;
 }
+
 a {
     color: inherit; /* 부모 엘리먼트의 값을 물려받는다 */
     text-decoration: none;
@@ -256,11 +280,13 @@ a {
     display: flex;
     flex-direction: column;
 }
+
 .side-bar.one {
     box-shadow: 0px 0px 0px 0px;
     transition: box-shadow 0.5s ease-in-out;
 }
-.side-bar ul{
+
+.side-bar ul {
     background-color: rgba(0, 0, 0, 0) !important;
 }
 
@@ -373,6 +399,7 @@ a {
     padding-left: 0px !important;
 
 }
+
 /* 모든 메뉴의 a에 속성값 부여 */
 .side-bar ul > li > a {
     display: block;
@@ -386,6 +413,7 @@ a {
     height: 100%;
     transition: .5s;
 }
+
 .menu_text {
     padding-top: 15px !important;
     padding-bottom: 15px !important;
@@ -417,7 +445,7 @@ a {
     /*background-color: rgba(30, 30, 30, 1);*/
 }
 
-.menu_li_sub{
+.menu_li_sub {
     font-size: 13px;
     background-color: rgba(24, 24, 31, 1);
     height: 50px;
@@ -428,46 +456,53 @@ a {
     color: white;
     transition: all 0.25s ease-in-out;
 }
-.menu_li_sub:hover{
+
+.menu_li_sub:hover {
     cursor: pointer;
     background-color: rgba(24, 24, 31, 0.7);
 }
+
 /* 1차 메뉴의 항목이 마우스 인식 시에 2차 메뉴 등장 */
-.sub_test{
+.sub_test {
     width: 100%;
     height: 0px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.25s ease-in-out;
 }
-.sub_test2{
+
+.sub_test2 {
     width: 100%;
     height: 0px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.25s ease-in-out;
 }
+
 .sub_test3 {
     position: absolute;
     top: 0;
-    left:-500px;
+    left: -500px;
     width: 500px;
-    height :100%;
-    visibility :hidden;
-    z-index :1;
+    height: 100%;
+    visibility: hidden;
+    z-index: 1;
 }
-.sub_test2_on{
+
+.sub_test2_on {
     height: 150px;
     opacity: 1;
     visibility: visible;
     transition: all 0.25s ease-in-out;
 }
-.sub_test_on{
+
+.sub_test_on {
     height: 100px;
     opacity: 1;
     visibility: visible;
     transition: all 0.25s ease-in-out;
 }
+
 .sub_test3_on {
     position: absolute;
     top: 0;
@@ -482,7 +517,7 @@ a {
     transition: all 0.5s ease-in-out;
 }
 
-.foot{
+.foot {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -490,14 +525,16 @@ a {
     align-items: center;
     width: 100%;
 }
-.foot_2{
+
+.foot_2 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
     height: 50px;
 }
-.friend_search{
+
+.friend_search {
     display: flex;
     box-sizing: border-box;
     align-items: center;
@@ -505,12 +542,14 @@ a {
     height: 70px;
     padding: 15px 14px;
 }
-.friend_search_2{
+
+.friend_search_2 {
     width: 100%;
     height: 100%;
     display: flex;
     position: relative;
 }
+
 .select_search_friend {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -531,10 +570,11 @@ a {
     outline: none;
     font-size: 11px !important;
     color: white !important;
-   font-family: 'Noto Sans KR', sans-serif !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
     transition: all 0.25s ease-in-out !important;
 }
-.select_search_friend_disabled{
+
+.select_search_friend_disabled {
     border-radius: 4px !important;
     position: relative;
     width: 100% !important;
@@ -551,20 +591,23 @@ a {
     outline: none;
     font-size: 11px !important;
     color: white !important;
-   font-family: 'Noto Sans KR', sans-serif !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
     transition: all 0.25s ease-in-out !important;
     cursor: auto;
 }
-.select_search_friend_disabled:hover{
+
+.select_search_friend_disabled:hover {
     background-color: rgba(24, 24, 31, 1) !important;
     border: 1px solid #595c5d !important;
     border-bottom-width: 0px !important;
     border-right-width: 0px !important;
     border-left-width: 0px !important;
 }
+
 .select_search_friend * {
     border: 0px !important;
 }
+
 .select_search_friend:hover {
     background-color: rgba(24, 24, 31, 1) !important;
     border: 1px solid #595c5d !important;
@@ -572,20 +615,23 @@ a {
     border-right-width: 0px !important;
     border-left-width: 0px !important;
 }
+
 .select_search_friend::after {
     display: none;
 }
 
-.select_search_friend_li{
+.select_search_friend_li {
     font-size: 11px !important;
-    background-color: black!important;
+    background-color: black !important;
     color: rgba(255, 255, 255, 0.8) !important;
-   font-family: 'Noto Sans KR', sans-serif !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
 }
-.select_search_friend_li:hover{
+
+.select_search_friend_li:hover {
     background-color: rgba(255, 255, 255, 0.3) !important;
 }
-.move_nationally{
+
+.move_nationally {
     position: absolute !important;
     top: 5px !important;
     right: 5px !important;
@@ -595,23 +641,27 @@ a {
     min-width: 30px !important;
     height: 30px !important;
     color: white !important;
-   font-family: 'Noto Sans KR', sans-serif !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
     border-radius: 3px !important;
     transition: all 0.25s ease-in-out !important;
 }
-.move_nationally.one{
+
+.move_nationally.one {
     top: 5px !important;
     right: 45px !important;
 }
-.move_nationally:hover{
+
+.move_nationally:hover {
     background-color: #272731 !important;
 }
-.flag_list_select{
+
+.flag_list_select {
     width: 15px;
     height: 15px;
     margin-right: 10px;
 }
-.foot_3{
+
+.foot_3 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 7px;
@@ -622,7 +672,8 @@ a {
     height: 70px;
     margin-bottom: 30px;
 }
-.line_create{
+
+.line_create {
     position: relative;
     overflow: hidden;
     margin: auto;
@@ -634,12 +685,14 @@ a {
     justify-content: center;
     align-items: center;
 }
-.line_create.one::before{
+
+.line_create.one::before {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-.line_create::before{
-    background: conic-gradient(transparent 180deg,  #FFBD1F 360deg);
+
+.line_create::before {
+    background: conic-gradient(transparent 180deg, #FFBD1F 360deg);
     animation: rotate 1s infinite linear;
     position: absolute;
     top: -25%;
@@ -651,12 +704,14 @@ a {
     z-index: -1;
     transition: opacity 1s ease-in-out;
 }
+
 @keyframes rotate {
     100% {
         transform: rotate(360deg);
     }
 }
-.R_maximum_btn{
+
+.R_maximum_btn {
     margin: auto !important;
     background-color: #18181f !important;
     width: 80% !important;
@@ -668,21 +723,24 @@ a {
     border-radius: 5px !important;
     transition: all 0.25s ease-in-out !important;
 }
-.R_maximum_btn:hover{
+
+.R_maximum_btn:hover {
     background-color: #272731 !important;
     border-top-width: 0px !important;
 }
 
-.R_maximum_btn:disabled{
+.R_maximum_btn:disabled {
     background-color: #1a1a1f !important;
     color: rgba(70, 70, 70, 1) !important;
     border-top-width: 0px !important;
     transition: all 0.25s ease-in-out;
 }
-.foot_text{
+
+.foot_text {
     font-size: 10px;
     color: rgba(255, 255, 255, 0.2);
 }
+
 .myPageDiv {
     position: fixed;
     top: 50%;
@@ -694,7 +752,8 @@ a {
     background-color: rgba(50, 50, 50, 0.7);
     border: 2px solid rgba(50, 50, 50, 0.9);
 }
-.passwordChangeDiv{
+
+.passwordChangeDiv {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -709,7 +768,8 @@ a {
     padding: 20px;
     box-sizing: border-box;
 }
-.passwordChangeDiv_2{
+
+.passwordChangeDiv_2 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -718,38 +778,44 @@ a {
     align-items: center;
     box-sizing: border-box;
 }
-.passwordChangeDiv_input_Form{
+
+.passwordChangeDiv_input_Form {
     display: flex;
     width: 100%;
     position: relative;
     margin-bottom: 30px;
 }
-.passwordChangeDiv_input_Form2{
+
+.passwordChangeDiv_input_Form2 {
     display: flex;
     width: 100%;
     position: relative;
     margin-bottom: 45px;
 }
-.passwordChangeDiv_input_Form3{
+
+.passwordChangeDiv_input_Form3 {
     display: flex;
     width: 100%;
     position: relative;
     margin-bottom: 30px;
 }
-.passwordChangeDiv_btn_submit_div{
+
+.passwordChangeDiv_btn_submit_div {
     display: flex;
     width: 100%;
     position: relative;
     margin-bottom: 0px;
 }
 
-.passwordChangeDiv_input.success{
+.passwordChangeDiv_input.success {
     border: 1px solid green !important;
 }
-.passwordChangeDiv_input.fail{
+
+.passwordChangeDiv_input.fail {
     border: 1px solid indianred !important;
 }
-.passwordChangeDiv_input{
+
+.passwordChangeDiv_input {
     width: 100% !important;
     height: 50px !important;
     color: white;
@@ -760,7 +826,8 @@ a {
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
 }
-.passwordChangeDiv_input.two{
+
+.passwordChangeDiv_input.two {
     border-radius: 4px !important;
 }
 
@@ -772,7 +839,8 @@ a {
     justify-content: center;
     align-items: center;
 }
-.signDiv{
+
+.signDiv {
     width: 100%;
     height: 100%;
     background-color: rgba(24, 24, 31, 0.5) !important;
@@ -784,21 +852,25 @@ a {
 .loginDiv_2 {
     width: 75%;
 }
-.login_img_div{
+
+.login_img_div {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.login_img{
+
+.login_img {
     width: 45%;
     height: 35px;
     margin-bottom: 70px;
 }
-.signup_img{
+
+.signup_img {
     width: 50%;
     height: 35px;
     margin-bottom: 40px;
 }
+
 .signupDiv_2 {
     width: 90%;
 }
@@ -813,7 +885,8 @@ a {
     margin-bottom: 50px;
     position: relative;
 }
-.myPageDiv_profile_img{
+
+.myPageDiv_profile_img {
     width: 150px;
     height: 150px;
     border-radius: 4px;
@@ -822,6 +895,7 @@ a {
     margin-bottom: 20px;
     margin-top: 30px;
 }
+
 .myPageDiv3 {
     width: 100%;
     display: flex;
@@ -830,7 +904,8 @@ a {
     align-items: center;
 
 }
-.myPageDiv_info_1{
+
+.myPageDiv_info_1 {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -840,7 +915,8 @@ a {
     padding: 10px 30px;
     position: relative;
 }
-.myPageDiv_info_2{
+
+.myPageDiv_info_2 {
     width: 50%;
     height: 100%;
     display: flex;
@@ -849,32 +925,37 @@ a {
     padding-right: 15px;
     box-sizing: border-box;
 }
-.myPageDiv_info_1_1{
+
+.myPageDiv_info_1_1 {
     text-align: center;
     position: relative;
 }
-.myPageDiv_info_1_text{
+
+.myPageDiv_info_1_text {
     color: rgba(255, 255, 255, 0.8) !important;
     position: absolute;
     top: -10px;
     left: 40px;
     font-size: 10px;
 }
-.myPageDiv_info_2_text{
+
+.myPageDiv_info_2_text {
     color: rgba(255, 255, 255, 0.8) !important;
     position: absolute;
     top: -10px;
     left: 275px;
     font-size: 10px;
 }
-.myPageDiv_info_3_text{
+
+.myPageDiv_info_3_text {
     color: rgba(255, 255, 255, 0.8) !important;
     position: absolute;
     top: 127px;
     left: 40px;
     font-size: 10px;
 }
-.myPageDiv_info_1_input{
+
+.myPageDiv_info_1_input {
     width: 50% !important;
     height: 50px !important;
     color: white;
@@ -883,7 +964,8 @@ a {
     border-radius: 4px !important;
     margin-right: 30px;
 }
-.myPageDiv_info_1_1_input{
+
+.myPageDiv_info_1_1_input {
     width: 50% !important;
     height: 50px !important;
     margin-bottom: 0px !important;
@@ -902,7 +984,8 @@ a {
     box-sizing: border-box;
     padding: 25px 30px 30px;
 }
-.myPageDiv_Message_div{
+
+.myPageDiv_Message_div {
     background-color: rgba(24, 24, 31, 0.3);
     width: 100%;
     height: 100%;
@@ -910,7 +993,8 @@ a {
     padding-bottom: 10px;
     box-sizing: border-box;
 }
-.myPageDiv_Message_text{
+
+.myPageDiv_Message_text {
     width: 100%;
     height: 90%;
     display: flex;
@@ -919,7 +1003,8 @@ a {
     padding: 12px;
     box-sizing: border-box;
 }
-.myPageDiv_Message_textarea{
+
+.myPageDiv_Message_textarea {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.05);
@@ -933,7 +1018,8 @@ a {
     color: white;
     font-size: 12px;
 }
-.myPageDiv_Message_btn_div{
+
+.myPageDiv_Message_btn_div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -956,18 +1042,20 @@ input[type=text], input[type=password], input[type=file] {
 }
 
 .inputFromTextMui:focus {
- border: 0px !important;
+    border: 0px !important;
 }
 
 .inputFromText {
     color: white;
     padding-left: 50px !important;
 }
-.inputFromText_pwd{
+
+.inputFromText_pwd {
     color: white;
     padding-left: 20px !important;
 }
-.inputFromText::placeholder{
+
+.inputFromText::placeholder {
     font-size: 11px !important;
 }
 
@@ -1022,6 +1110,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     box-sizing: border-box;
     width: 100%;
 }
+
 .loginForm2 {
     position: relative;
     display: flex;
@@ -1031,19 +1120,22 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     box-sizing: border-box;
     width: 100%;
 }
-.login_icon{
+
+.login_icon {
     position: absolute;
-    top :12px;
+    top: 12px;
     left: 25px;
     color: rgba(255, 255, 255, 0.5) !important;
 }
-.pwd_icon{
+
+.pwd_icon {
     position: absolute;
-    top :12px;
+    top: 12px;
     left: 25px;
     color: rgba(255, 255, 255, 0.5) !important;
 }
-.loginForm_remmember{
+
+.loginForm_remmember {
     display: flex;
     justify-content: flex-start;
     padding-left: 30px;
@@ -1051,12 +1143,14 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     align-items: center;
     width: 100%;
 }
-.rememberAccountCheckbox{
+
+.rememberAccountCheckbox {
     width: 30px !important;
     height: 30px !important;
     color: white !important;
 }
-.label_remmember{
+
+.label_remmember {
     font-size: 15px;
     color: white !important;
 }
@@ -1069,16 +1163,18 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     color: indianred !important;
     border: 0px solid #3b3e3f !important;
     border-top-width: 1px !important;
-   font-family: 'Noto Sans KR', sans-serif !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
     box-shadow: 2px 3px 0px 0px black;
 }
-.error_text:hover{
+
+.error_text:hover {
     background-color: #272731 !important;
 }
 
 .error_text.no {
     color: white !important;
 }
+
 .login_btn {
     width: 90%;
     height: 60px;
@@ -1089,6 +1185,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     padding-right: 10px;
     box-sizing: border-box;
 }
+
 .login_btn2 {
     width: 100% !important;
     height: 60px;
@@ -1100,7 +1197,8 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     box-sizing: border-box;
     margin-top: 5px !important;
 }
-.line{
+
+.line {
     margin: auto;
     width: 82%;
     height: 1px;
@@ -1109,12 +1207,14 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     justify-content: center;
     align-items: center;
 }
-.line_1{
+
+.line_1 {
     width: 42%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
 }
-.line_text{
+
+.line_text {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.5);
     width: 16%;
@@ -1123,7 +1223,8 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     justify-content: center;
     align-items: center;
 }
-.login_btn_google_div{
+
+.login_btn_google_div {
     width: 100% !important;
     height: 60px;
     display: flex;
@@ -1134,7 +1235,8 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     box-sizing: border-box;
     margin-top: 30px;
 }
-.social_login_box.google{
+
+.social_login_box.google {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.9);
@@ -1148,21 +1250,25 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     align-items: center;
     transition: all 0.25s ease;
 }
-.social_login_box.google:hover{
+
+.social_login_box.google:hover {
     background-color: rgba(255, 255, 255, 0.65);
     cursor: pointer;
 }
-.social_login_image_box{
+
+.social_login_image_box {
     width: 60px;
     height: 100%;
     padding: 10px;
     box-sizing: border-box;
 }
-.google_icon{
+
+.google_icon {
     width: 100%;
     height: 100%;
 }
-.social_login_text_box{
+
+.social_login_text_box {
     width: calc(100% - 120px);
     height: 100%;
     display: flex;
@@ -1170,11 +1276,13 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     align-items: center;
     font-family: 'Russo One', sans-serif !important;
 }
-.social_login_blank_box{
+
+.social_login_blank_box {
     width: 60px;
     height: 100%;
 }
-.checkbtn{
+
+.checkbtn {
     border-radius: 0px !important;
     border-top-right-radius: 4px !important;
     border-bottom-right-radius: 4px !important;
@@ -1190,7 +1298,8 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     color: white !important;
     transition: all 0.25s ease-out;
 }
-.checkbtn:hover{
+
+.checkbtn:hover {
     background-color: #272731 !important;
 }
 
@@ -1218,11 +1327,11 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
 }
 
 .emptyID.yes {
-    border: 1px solid green!important;
+    border: 1px solid green !important;
 }
 
 .emptyID.no {
-    border: 1px solid indianred!important;
+    border: 1px solid indianred !important;
 }
 
 
@@ -1236,10 +1345,12 @@ input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
     border-top-width: 1px !important;
     box-shadow: 2px 3px 0px 0px black;
 }
-.SignUpBtn:hover{
+
+.SignUpBtn:hover {
     background-color: #272731 !important;
 }
-.SignUpBtn:disabled{
+
+.SignUpBtn:disabled {
     background-color: #2b2b2f !important;
     box-shadow: -2px -2px 0px 0px black;
     color: #8d8d8d !important;
@@ -1325,14 +1436,16 @@ button[type=button]:hover {
     font-size: 11px;
     color: rgba(255, 255, 255, 1);
 }
-.Text_sign2{
+
+.Text_sign2 {
     position: absolute;
     top: 53px;
     left: 12px;
     font-size: 10px;
     color: rgba(255, 255, 255, 1);
 }
-.Text_sign_Error2{
+
+.Text_sign_Error2 {
     position: absolute;
     top: 53px;
     left: 12px;
@@ -1348,7 +1461,8 @@ button[type=button]:hover {
     color: white;
     font-weight: bold;
 }
-.Text_sign_Error_sign{
+
+.Text_sign_Error_sign {
     position: absolute;
     top: 52px;
     left: 20px;
@@ -1379,24 +1493,29 @@ button[type=button]:hover {
     outline: none;
     font-size: 13px !important;
     color: rgba(220, 220, 220, 0.5) !important;
-   font-family: 'Noto Sans KR', sans-serif !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
     transition: all 0.25s ease-in-out !important;
 }
+
 .custom_select * {
     border: 0px !important;
 }
-input:hover{
+
+input:hover {
     border: 1px solid rgba(200, 200, 200, 0.8) !important;
 }
+
 .custom_select:hover {
     border: 1px solid rgba(200, 200, 200, 0.8) !important;
 }
-.menu_li_select{
+
+.menu_li_select {
     font-size: 10px !important;
     background-color: rgba(50, 50, 50, 0.5) !important;
     color: rgba(255, 255, 255, 0.8) !important;
 }
-.menu_li_select_place{
+
+.menu_li_select_place {
     font-size: 10px !important;
     background-color: rgba(50, 50, 50, 0.5) !important;
     color: rgba(255, 255, 255, 0.4) !important;
@@ -1412,6 +1531,7 @@ input:hover{
     pointer-events: none; /* 화살표를 클릭하면 제대로 동작하도록 */
     /* 원하는 위치와 스타일로 수정 */
 }
-ul{
+
+ul {
     background-color: black;
 }

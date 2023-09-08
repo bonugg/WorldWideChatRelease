@@ -8,43 +8,37 @@ const FriendsReceivedListItem = ({list, onRemove}) => {
     const {id, user, friends, statement} = list;
     const [statements, setStatements] = useState('WAITING');
 
-    const acceptFrd = useCallback((e) => {
-        const acceptFrdAxios = async () => {
-            try {
-                const response = await axios.post('/friends/approve', {id: id},
-                    {
-                        headers: {
-                            Authorization: `${localStorage.getItem('Authorization')}`
-                        }
-                    });
-                if (response.data.item.msg == 'request approved') {
-                    setStatements('APPROVED');
-                    setTimeout(() => onRemove(id), 1000);  // Add this line
-                }
-            } catch (e) {
+    const acceptFrd = async () => {
+        try {
+            const response = await axios.post('/friends/approve', {id: id},
+                {
+                    headers: {
+                        Authorization: `${localStorage.getItem('Authorization')}`
+                    }
+                });
+            if (response.data.item.msg == 'request approved') {
+                setStatements('APPROVED');
+                setTimeout(() => onRemove(id), 1000);  // Add this line
             }
+        } catch (e) {
         }
-        acceptFrdAxios();
-    }, [onRemove]);
+    }
 
-    const denyRequest = useCallback((e) => {
-        const denyRequestAxios = async () => {
-            try {
-                const response = await axios.post('/friends/decline', {id: id},
-                    {
-                        headers: {
-                            Authorization: `${localStorage.getItem('Authorization')}`
-                        }
-                    });
-                if (response.data.item.msg == 'request denied') {
-                    setStatements('DECLINE');
-                    setTimeout(() => onRemove(id), 1000);  // Add this line
-                }
-            } catch (e) {
+    const denyRequest = async () => {
+        try {
+            const response = await axios.post('/friends/decline', {id: id},
+                {
+                    headers: {
+                        Authorization: `${localStorage.getItem('Authorization')}`
+                    }
+                });
+            if (response.data.item.msg == 'request denied') {
+                setStatements('DECLINE');
+                setTimeout(() => onRemove(id), 1000);  // Add this line
             }
+        } catch (e) {
         }
-        denyRequestAxios();
-    }, [onRemove]);
+    }
 
     return (
         <div

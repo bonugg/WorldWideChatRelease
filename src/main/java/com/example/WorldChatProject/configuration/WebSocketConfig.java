@@ -52,13 +52,10 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint( "/random") //https://localhost:9002/random/
-                .setAllowedOrigins("*")
                 .withSockJS(); //SockJS 사용을 위한 설정
         registry.addEndpoint("/CateChat")
-                .setAllowedOrigins("*")
                 .withSockJS();
         registry.addEndpoint("/friendchat")
-                .setAllowedOrigins("*")
                 .withSockJS();
     }
 
